@@ -4,6 +4,11 @@
 ## App URL
 
 https://money-trf.herokuapp.com/
+
+## GitHub page
+
+https://github.com/AdrianDurak/money-transfer
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
