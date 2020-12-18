@@ -1,0 +1,22 @@
+<div class="modal-background" [class.fade-in]="modalData['opened']"></div>
+<div class="modal-container" [class.fade-in]="modalData['opened']">
+    <div class="modal-header">{{'confirm-modal.header' | translate}}</div>
+    <div class="modal-body">
+        <div>
+            <span class="modal-prop-desc">{{'confirm-modal.from-acount' | translate}}</span>
+            <span class="modal-prop-val">{{modalData.fromAccount}}</span>
+        </div>
+        <div>
+            <span class="modal-prop-desc">{{'confirm-modal.to-acount' | translate}}</span>
+            <span class="modal-prop-val">{{modalData.toAccount}}</span>
+        </div>
+        <div>
+            <span class="modal-prop-desc">{{'confirm-modal.amount' | translate}}</span>
+            <span class="modal-prop-val">{{modalData.amount}}</span>
+        </div>
+        <div class="modal-buttons">
+            <button class="btn cancel" type="button" (click)="closeModal(false)">{{'confirm-modal.cancel' | translate}}</button>
+            <button class="btn" type="button" (click)="closeModal(true)">{{'confirm-modal.transfer' | translate}}</button>
+        </div>
+    </div>
+</div>

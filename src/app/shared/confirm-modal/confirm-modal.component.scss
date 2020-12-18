@@ -1,0 +1,82 @@
+.modal-background {
+    position: fixed;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0;
+
+    &.fade-in {
+        visibility: visible;
+        opacity: 0.7;
+    }
+}
+
+.modal-container {
+    visibility: hidden;
+    width: 500px;
+    position: absolute;
+    top: 40%;
+    background: white;
+    z-index: 10;
+    padding:  0 10px;
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    left: calc((100vw - 500px) / 2);
+
+    &.fade-in {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c8397;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.modal-body {
+    padding-top: 30px;
+
+    & > div {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      padding: 10px 10px 10px 10px;
+    }
+
+    & .modal-prop-desc {
+        font-size: 19px;
+        display: inline-block;
+        min-width: 150px;
+    }
+
+    & .modal-prop-val {
+        font-weight: lighter;
+    }
+
+    .modal-buttons {
+        justify-content: space-between;
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal-container {
+        width: 96vw;
+        left: 0;
+    }
+}

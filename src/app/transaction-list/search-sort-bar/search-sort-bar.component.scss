@@ -1,0 +1,120 @@
+.search-sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
+}
+
+.transaction-search {
+    width: calc(100% - 440px);
+    position: relative;
+
+    & input {
+        border-bottom: 1px solid #d6d2ce;
+        width: 100%;
+        font-size: 17px;
+    }
+}
+
+.reset-input-icon {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+  
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 20px;
+      width: 2px;
+      background-color: #333;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+}
+
+.transaction-sort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & span {
+        font-size: 15px;
+    }
+
+    & .sort-buttons {
+        list-style: none;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    & .sort-buttons li {
+        position: relative;
+        display: inline;
+        border: 1px solid #cccccc;
+        padding: 5px 24px;
+        font-weight: lighter;
+    }
+
+    & .sort-buttons li:nth-child(2) {
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.arrow{
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #999999;
+}
+
+.arrow.up {
+    border-bottom: 7px solid #999999;
+    border-top: none;
+}
+
+@media screen and (max-width: 1090px) {
+    .search-sort {
+        height: 110px;
+    }
+    .transaction-search {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .transaction-sort > span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .transaction-sort  {
+        & .sort-buttons li {
+            font-size: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

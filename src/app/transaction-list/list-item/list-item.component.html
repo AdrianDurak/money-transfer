@@ -1,0 +1,13 @@
+<div class="list-item">
+    <div class="transaction-color-bar" [ngStyle]="{'background': transaction.categoryCode}"></div>
+    <div class="transaction-date">{{transaction.dates.valueDate | date:'MMM. d'}}</div>
+    <div class="transaction-img" [ngStyle]="{'background-image': transaction.merchant.img}" role="img" aria-label="transaction beneficiary thumbnail"></div>
+    <div class="transaction-merchant-type">
+        <span class="merchant">{{transaction.merchant.name}}</span>
+        <span class="type">{{transaction.transaction.type}}</span>
+    </div>
+    <div class="transaction-amount-currency">
+        <span>-</span>
+        <span>{{ ( transaction.transaction.amountCurrency.amount | currency : transaction.transaction.amountCurrency.currencyCode : 'symbol-narrow' )}}</span>
+    </div>
+</div>

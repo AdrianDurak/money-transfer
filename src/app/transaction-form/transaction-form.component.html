@@ -1,0 +1,22 @@
+<div class="form-header">
+    <span role="heading">{{'transaction-form.header' | translate}}</span>
+</div>
+<form [formGroup]="transactionForm" class="transaction-form">
+    <div class="form-control">
+        <label for="fromAccount">{{'transaction-form.from-acount' | translate}}</label>
+        <input id="fromAccount" type="text" formControlName="fromAccount" name="from-acount">
+    </div>
+    <div class="form-control">
+        <label for="toAccount">{{'transaction-form.to-acount' | translate}}</label>
+        <input id="toAccount" type="text" formControlName="toAccount" name="to-acount">
+        <span class="error-message" [hidden]="!transactionForm.get('toAccount').hasError('required')  || !transactionForm.get('toAccount').touched" role="alert">Required field</span>
+    </div>
+    <div class="form-control">
+        <label for="amount">{{'transaction-form.amount' | translate}}</label>
+        <input id="amount" type="text" formControlName="amount" name="amount">
+        <span class="error-message" [hidden]="!transactionForm.get('amount').hasError('invalidAmount')" role="alert">{{'transaction-form.invalid-amount' | translate}}</span>
+        <span class="error-message" [hidden]="!transactionForm.get('amount').hasError('lackOfFunds')" role="alert">{{'transaction-form.lack-of-funds' | translate}}</span>
+        <span class="error-message" [hidden]="!transactionForm.get('amount').hasError('required')  || !transactionForm.get('amount').touched" role="alert">{{'transaction-form.required' | translate}}</span>
+    </div>
+    <button class="btn" type="button" [disabled]="!transactionForm.valid" (click)="confirmTransaction()">{{'transaction-form.submit' | translate}}</button>
+</form>

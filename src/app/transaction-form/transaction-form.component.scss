@@ -1,0 +1,47 @@
+.form-header {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c8397;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.transaction-form {
+    padding: 33px 19px 0 19px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 53px;
+    margin-bottom: 25px;
+}
+
+.form-control input {
+    border-bottom: 2px solid #d6d2ce;
+}
+
+.form-control label {
+    font-size: 14px;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+}
+
+.btn {
+    margin-left: 79px;
+}
+
+@media screen and (max-width: 960px) {
+    .btn {
+        float: right;
+    }
+}

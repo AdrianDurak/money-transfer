@@ -1,0 +1,27 @@
+{
+    "transaction-form": {
+        "header": "Make a Transfer",
+        "from-acount": "FROM ACCOUNT",
+        "to-acount": "TO ACCOUNT",
+        "amount": "AMOUNT",
+        "invalid-amount": "Invalid amount",
+        "lack-of-funds": "Lack of Funds",
+        "required": "Required field",
+        "submit": "SUBMIT"
+    },
+    "transaction-list": {
+        "header": "Recent Transactions",
+        "sort-by":"Sort by",
+        "date":"DATE",
+        "beneficiary":"BENEFICIARY",
+        "amount":"AMOUNT"
+    },
+    "confirm-modal": {
+        "header": "Confirm Transaction Data",
+        "from-acount": "From account:",
+        "to-acount": "To account:",
+        "amount": "Amount:",
+        "cancel": "CANCEL",
+        "transfer": "TRANSFER"
+    }
+}

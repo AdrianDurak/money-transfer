@@ -1,0 +1,30 @@
+.transaction-list-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0c8397;
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    font-weight: lighter;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.transaction-list-items {
+    height: calc(100% - 160px);
+    overflow: auto;
+}
+
+@media screen and (max-width: 1090px) {
+    .transaction-list-items {
+        height: calc(100% - 180px);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .transaction-list-items {
+        height: auto;
+    }
+}

@@ -1,0 +1,67 @@
+.list-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #cccccc;
+    border-bottom: none;
+    height: 70px;
+}
+
+:host:last-child .list-item {
+    border-bottom: 2px solid #cccccc;
+}
+
+.transaction-color-bar {
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    height: 72px;
+    width: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.transaction-date {
+    padding-left: 25px;
+    padding-right: 50px;
+    font-weight: lighter;
+}
+
+.transaction-img {
+    width: 50px;
+    height: 50px;
+}
+
+.transaction-merchant-type {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+
+    & .merchant {
+        font-size: 19px;
+    }
+
+    & .type {
+        font-weight: lighter;
+        padding-top: 3px;
+    }
+}
+
+.transaction-amount-currency {
+    margin-left: auto;
+    padding-right: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .transaction-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .transaction-merchant-type {
+        display: none;
+    }
+}

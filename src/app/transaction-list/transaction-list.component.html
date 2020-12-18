@@ -1,0 +1,5 @@
+<div class="transaction-list-header"><span role="heading">{{'transaction-list.header' | translate}}</span></div>
+<app-search-sort-bar (searchPhraseEmitter)="filterTransaction($event)" (sortPhraseEmitter)="sortTransactions($event)"></app-search-sort-bar>
+<div class="transaction-list-items">
+    <app-list-item *ngFor="let transaction of filteredTransactions" [transaction]="transaction"></app-list-item>
+</div>

@@ -1,0 +1,20 @@
+<div class="search-sort" role="search">
+    <div class="transaction-search">
+        <input type="text" placeholder="Search by typing..." [(ngModel)]="searchPhrase" (input)="emitSerachPhrase()">
+        <span class="reset-input-icon" (click)="clearSearchPhrase()"></span>
+    </div>
+    <div class="transaction-sort">
+        <span>{{'transaction-list.sort-by' | translate}}</span>
+        <ul class="sort-buttons">
+            <li class="no-selectable" (click)="emitSortPhrase(SortPhrase.DATE)" role="tab">
+                {{'transaction-list.date' | translate}} <span class="arrow" *ngIf="currentSort.phrase == SortPhrase.DATE" [class.up]="currentSort.order === SortOrder.ASC"></span>
+            </li>
+            <li class="no-selectable" (click)="emitSortPhrase(SortPhrase.BENEFICIARY)" role="tab">
+                {{'transaction-list.beneficiary' | translate}} <span class="arrow" *ngIf="currentSort.phrase == SortPhrase.BENEFICIARY" [class.up]="currentSort.order === SortOrder.ASC"></span>
+            </li>
+            <li class="no-selectable" (click)="emitSortPhrase(SortPhrase.AMOUNT)" role="tab">
+                {{'transaction-list.amount' | translate}} <span class="arrow" *ngIf="currentSort.phrase == SortPhrase.AMOUNT" [class.up]="currentSort.order === SortOrder.ASC"></span>
+            </li>
+        </ul>
+    </div>
+</div>
